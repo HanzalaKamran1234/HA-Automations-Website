@@ -1,9 +1,12 @@
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
+import { Link, useLocation } from 'react-router-dom';
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
+    const location = useLocation();
+    const isHome = location.pathname === '/';
 
     useEffect(() => {
         const handleScroll = () => {
@@ -14,17 +17,18 @@ const Navbar = () => {
     }, []);
 
     const navLinks = [
-        { name: 'About', href: '#about' },
-        { name: 'Services', href: '#services' },
-        { name: 'Projects', href: '#projects' },
+        { name: 'About', href: '/#about' },
+        { name: 'Services', href: '/#services' },
+        { name: 'Projects', href: '/#projects' },
+        { name: 'Blog', href: '/blog' },
     ];
 
     return (
         <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-black/80 backdrop-blur-md py-4' : 'bg-transparent py-6'}`}>
             <div className="container mx-auto px-6 flex justify-between items-center">
-                <a href="#" className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
+                <Link to="/" className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
                     HA Automations
-                </a>
+                </Link>
 
                 {/* Desktop Menu */}
                 <div className="hidden md:flex items-center space-x-8">
@@ -32,7 +36,10 @@ const Navbar = () => {
                         <a
                             key={link.name}
                             href={link.href}
-                            className="text-gray-300 hover:text-white hover:glow-text transition-colors text-sm font-medium"
+                            className={`text-sm font-medium transition-colors ${location.pathname === link.href
+                                    ? 'text-cyan-400'
+                                    : 'text-gray-300 hover:text-white hover:glow-text'
+                                }`}
                         >
                             {link.name}
                         </a>
