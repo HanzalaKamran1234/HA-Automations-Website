@@ -19,16 +19,18 @@ const Hero = () => {
 
     return (
         <section
-            className="relative min-h-screen flex items-center pt-20 overflow-hidden"
+            className="relative min-h-[100dvh] flex items-center pt-20 overflow-hidden"
         >
             {/* Interactive Mouse Glow */}
             <motion.div
                 style={{ x: mouseX, y: mouseY }}
                 className="fixed top-0 left-0 w-[500px] h-[500px] bg-blue-500/20 rounded-full blur-[100px] pointer-events-none z-0"
             />
-            {/* Background Gradient */}
-            <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-cyan-500/10 rounded-full blur-[100px] pointer-events-none" />
-            <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-purple-500/10 rounded-full blur-[100px] pointer-events-none" />
+            {/* Background Gradient - Wrapped to prevent overflow */}
+            <div className="absolute inset-0 overflow-hidden pointer-events-none">
+                <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-cyan-500/10 rounded-full blur-[100px]" />
+                <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-purple-500/10 rounded-full blur-[100px]" />
+            </div>
 
             <div className="container mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
 
@@ -47,7 +49,7 @@ const Hero = () => {
                         <span className="text-sm text-gray-300">Accepting New Clients</span>
                     </div>
 
-                    <h1 className="text-5xl md:text-7xl font-bold leading-tight">
+                    <h1 className="text-4xl md:text-7xl font-bold leading-tight">
                         AI Automations That <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">Scale Your Business</span>
                     </h1>
 
