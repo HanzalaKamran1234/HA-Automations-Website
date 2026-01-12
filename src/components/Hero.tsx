@@ -87,7 +87,7 @@ const Hero = () => {
                     initial={{ opacity: 0, x: 50 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.8, delay: 0.2 }}
-                    className="relative w-full"
+                    className="relative w-full -translate-x-3 md:translate-x-0"
                 >
                     <div className="relative z-10 border border-white/10 bg-white/5 backdrop-blur-sm w-full max-w-md mx-auto glow-box rounded-2xl overflow-hidden md:overflow-visible">
                         {/* Uses the image uploaded by the USER */}
