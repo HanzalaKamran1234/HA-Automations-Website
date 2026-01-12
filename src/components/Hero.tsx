@@ -53,7 +53,7 @@ const Hero = () => {
                         AI Automations That <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">Scale Your Business</span>
                     </h1>
 
-                    <p className="text-xl text-gray-400 max-w-lg">
+                    <p className="text-base md:text-xl text-gray-400 max-w-lg">
                         We build intelligent agents and workflow automations using Python and n8n to replace manual tasks with autonomous systems.
                     </p>
 
@@ -87,9 +87,9 @@ const Hero = () => {
                     initial={{ opacity: 0, x: 50 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.8, delay: 0.2 }}
-                    className="relative"
+                    className="relative w-full"
                 >
-                    <div className="relative z-10 border border-white/10 bg-white/5 backdrop-blur-sm max-w-md mx-auto glow-box rounded-2xl">
+                    <div className="relative z-10 border border-white/10 bg-white/5 backdrop-blur-sm w-full max-w-md mx-auto glow-box rounded-2xl overflow-hidden md:overflow-visible">
                         {/* Uses the image uploaded by the USER */}
                         <img
                             src="/hero-image.jpg"
