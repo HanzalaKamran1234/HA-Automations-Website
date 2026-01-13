@@ -6,7 +6,6 @@ const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
     const location = useLocation();
-    const isHome = location.pathname === '/';
 
     useEffect(() => {
         const handleScroll = () => {
@@ -33,16 +32,29 @@ const Navbar = () => {
                 {/* Desktop Menu */}
                 <div className="hidden md:flex items-center space-x-8">
                     {navLinks.map((link) => (
-                        <a
-                            key={link.name}
-                            href={link.href}
-                            className={`text-sm font-medium transition-colors ${location.pathname === link.href
+                        link.href.startsWith('/#') ? (
+                            <a
+                                key={link.name}
+                                href={link.href}
+                                className={`text-sm font-medium transition-colors ${location.pathname === link.href
                                     ? 'text-cyan-400'
                                     : 'text-gray-300 hover:text-white hover:glow-text'
-                                }`}
-                        >
-                            {link.name}
-                        </a>
+                                    }`}
+                            >
+                                {link.name}
+                            </a>
+                        ) : (
+                            <Link
+                                key={link.name}
+                                to={link.href}
+                                className={`text-sm font-medium transition-colors ${location.pathname === link.href
+                                    ? 'text-cyan-400'
+                                    : 'text-gray-300 hover:text-white hover:glow-text'
+                                    }`}
+                            >
+                                {link.name}
+                            </Link>
+                        )
                     ))}
                     <a
                         href="#contact"
@@ -66,14 +78,25 @@ const Navbar = () => {
                 <div className="md:hidden absolute top-full left-0 w-full bg-black/95 backdrop-blur-lg border-b border-gray-800 p-6">
                     <div className="flex flex-col space-y-4">
                         {navLinks.map((link) => (
-                            <a
-                                key={link.name}
-                                href={link.href}
-                                className="text-gray-300 text-lg"
-                                onClick={() => setIsOpen(false)}
-                            >
-                                {link.name}
-                            </a>
+                            link.href.startsWith('/#') ? (
+                                <a
+                                    key={link.name}
+                                    href={link.href}
+                                    className="text-gray-300 text-lg"
+                                    onClick={() => setIsOpen(false)}
+                                >
+                                    {link.name}
+                                </a>
+                            ) : (
+                                <Link
+                                    key={link.name}
+                                    to={link.href}
+                                    className="text-gray-300 text-lg"
+                                    onClick={() => setIsOpen(false)}
+                                >
+                                    {link.name}
+                                </Link>
+                            )
                         ))}
                         <a
                             href="#contact"
