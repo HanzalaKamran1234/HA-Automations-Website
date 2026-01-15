@@ -9,11 +9,19 @@ const Blog = () => {
     const [posts, setPosts] = useState<BlogPost[]>([]);
     const [loading, setLoading] = useState(true);
 
+    const [error, setError] = useState<string | null>(null);
+
     useEffect(() => {
         const fetchPosts = async () => {
-            const data = await getBlogPosts();
-            setPosts(data);
-            setLoading(false);
+            try {
+                const data = await getBlogPosts();
+                setPosts(data);
+            } catch (err: any) {
+                console.error(err);
+                setError(err.message || 'Failed to fetch posts');
+            } finally {
+                setLoading(false);
+            }
         };
         fetchPosts();
     }, []);
@@ -32,10 +40,27 @@ const Blog = () => {
                     <p className="text-gray-400 max-w-2xl mx-auto text-lg">
                         Thoughts, tutorials, and guides on AI automation, software engineering, and scaling your business.
                     </p>
+
+                    {/* Debug Info - Remove after fixing */}
+                    <div className="mt-4 p-4 bg-gray-900/50 rounded-lg text-xs font-mono text-left max-w-md mx-auto border border-gray-800">
+                        <p className="text-gray-500 mb-1">Debug Status:</p>
+                        <p className={import.meta.env.VITE_CONTENTFUL_SPACE_ID ? "text-green-500" : "text-red-500"}>
+                            Space ID: {import.meta.env.VITE_CONTENTFUL_SPACE_ID ? 'Configured ✅' : 'Missing ❌'}
+                        </p>
+                        <p className={import.meta.env.VITE_CONTENTFUL_ACCESS_TOKEN ? "text-green-500" : "text-red-500"}>
+                            Access Token: {import.meta.env.VITE_CONTENTFUL_ACCESS_TOKEN ? 'Configured ✅' : 'Missing ❌'}
+                        </p>
+                        {error && <p className="text-red-400 mt-2">Error: {error}</p>}
+                    </div>
                 </div>
 
                 {loading ? (
                     <div className="text-center text-gray-400 py-20">Loading articles...</div>
+                ) : error ? (
+                    <div className="text-center text-red-400 py-20">
+                        <p>Something went wrong loading the blog.</p>
+                        <p className="text-sm mt-2">{error}</p>
+                    </div>
                 ) : posts.length === 0 ? (
                     <div className="text-center text-gray-400 py-20">
                         <p>No articles found. Check your Contentful configuration.</p>

@@ -30,9 +30,7 @@ export interface BlogPostSkeleton extends EntrySkeletonType {
 export type BlogPost = Entry<BlogPostSkeleton, undefined, string>;
 
 export async function getBlogPosts(): Promise<BlogPost[]> {
-    if (!import.meta.env.VITE_CONTENTFUL_SPACE_ID) {
-        return [];
-    }
+    // Removed early return to allow error to propagate if credentials are missing
     const entries = await contentfulClient.getEntries<BlogPostSkeleton>({
         content_type: 'blogPost',
     });
