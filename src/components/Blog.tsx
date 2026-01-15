@@ -42,7 +42,7 @@ const Blog = () => {
                     </p>
 
                     {/* Debug Info - Remove after fixing */}
-                    <div className="mt-4 p-4 bg-gray-900/50 rounded-lg text-xs font-mono text-left max-w-md mx-auto border border-gray-800">
+                    <div className="mt-4 p-4 bg-gray-900/50 rounded-lg text-xs font-mono text-left max-w-md mx-auto border border-gray-800 break-words">
                         <p className="text-gray-500 mb-1">Debug Status:</p>
                         <p className={import.meta.env.VITE_CONTENTFUL_SPACE_ID ? "text-green-500" : "text-red-500"}>
                             Space ID: {import.meta.env.VITE_CONTENTFUL_SPACE_ID ? 'Configured ✅' : 'Missing ❌'}
@@ -50,6 +50,12 @@ const Blog = () => {
                         <p className={import.meta.env.VITE_CONTENTFUL_ACCESS_TOKEN ? "text-green-500" : "text-red-500"}>
                             Access Token: {import.meta.env.VITE_CONTENTFUL_ACCESS_TOKEN ? 'Configured ✅' : 'Missing ❌'}
                         </p>
+                        <div className="mt-2 pt-2 border-t border-gray-700">
+                            <p className="text-gray-500">Available Keys:</p>
+                            <div className="text-gray-400">
+                                {JSON.stringify(Object.keys(import.meta.env).filter(k => k.startsWith('VITE_')), null, 2)}
+                            </div>
+                        </div>
                         {error && <p className="text-red-400 mt-2">Error: {error}</p>}
                     </div>
                 </div>
