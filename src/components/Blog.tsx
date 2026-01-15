@@ -40,24 +40,6 @@ const Blog = () => {
                     <p className="text-gray-400 max-w-2xl mx-auto text-lg">
                         Thoughts, tutorials, and guides on AI automation, software engineering, and scaling your business.
                     </p>
-
-                    {/* Debug Info - Remove after fixing */}
-                    <div className="mt-4 p-4 bg-gray-900/50 rounded-lg text-xs font-mono text-left max-w-md mx-auto border border-gray-800 break-words">
-                        <p className="text-gray-500 mb-1">Debug Status:</p>
-                        <p className={import.meta.env.VITE_CONTENTFUL_SPACE_ID ? "text-green-500" : "text-red-500"}>
-                            Space ID: {import.meta.env.VITE_CONTENTFUL_SPACE_ID ? 'Configured ✅' : 'Missing ❌'}
-                        </p>
-                        <p className={import.meta.env.VITE_CONTENTFUL_ACCESS_TOKEN ? "text-green-500" : "text-red-500"}>
-                            Access Token: {import.meta.env.VITE_CONTENTFUL_ACCESS_TOKEN ? 'Configured ✅' : 'Missing ❌'}
-                        </p>
-                        <div className="mt-2 pt-2 border-t border-gray-700">
-                            <p className="text-gray-500">Available Keys:</p>
-                            <div className="text-gray-400">
-                                {JSON.stringify(Object.keys(import.meta.env).filter(k => k.startsWith('VITE_')), null, 2)}
-                            </div>
-                        </div>
-                        {error && <p className="text-red-400 mt-2">Error: {error}</p>}
-                    </div>
                 </div>
 
                 {loading ? (
@@ -69,10 +51,7 @@ const Blog = () => {
                     </div>
                 ) : posts.length === 0 ? (
                     <div className="text-center text-gray-400 py-20">
-                        <p>No articles found. Check your Contentful configuration.</p>
-                        <p className="text-sm mt-4 text-gray-500">
-                            (Make sure VITE_CONTENTFUL_SPACE_ID and VITE_CONTENTFUL_ACCESS_TOKEN are set)
-                        </p>
+                        <p>No articles found.</p>
                     </div>
                 ) : (
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">

@@ -2,8 +2,8 @@ import { createClient } from 'contentful';
 import type { Entry, EntrySkeletonType } from 'contentful';
 
 export const contentfulClient = createClient({
-    space: import.meta.env.VITE_CONTENTFUL_SPACE_ID || 'placeholderspace',
-    accessToken: import.meta.env.VITE_CONTENTFUL_ACCESS_TOKEN || 'placeholderheader',
+    space: 'qc084p3r3k7g',
+    accessToken: 'uvAYtoEkeN1DBRILg-PgHzS3XaGAJrYZeyJpkQxMHu8',
 });
 
 export interface BlogPostSkeleton extends EntrySkeletonType {
