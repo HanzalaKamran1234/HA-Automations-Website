@@ -41,7 +41,7 @@ const BlogPost = () => {
                         {post.fields.title}
                     </h1>
                     <div className="flex items-center gap-4 text-gray-400 mb-12 text-sm">
-                        <span>{post.fields.date}</span>
+                        <span>{new Date(post.fields.date).toLocaleDateString()}</span>
                         <span>•</span>
                         <span className="text-cyan-400">{post.fields.category}</span>
                         <span>•</span>

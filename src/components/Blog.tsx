@@ -69,7 +69,7 @@ const Blog = () => {
                                         {post.fields.excerpt}
                                     </p>
                                     <div className="flex items-center text-sm text-gray-500 justify-between mt-auto">
-                                        <span>{post.fields.date}</span>
+                                        <span>{new Date(post.fields.date).toLocaleDateString()}</span>
                                         <span className="flex items-center gap-2 group-hover:translate-x-2 transition-transform text-white">
                                             Read Article <ArrowRight className="w-4 h-4" />
                                         </span>
