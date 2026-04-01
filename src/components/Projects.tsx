@@ -5,34 +5,34 @@ import { motion } from 'framer-motion';
 const Projects = () => {
     const projects = [
         {
-            title: "AI Lead Generation Agent",
-            description: "A fully autonomous agent that finds, qualifies, and contacts potential leads across multiple platforms.",
-            tech: ["Python", "n8n", "APIs"],
+            title: "WhatsApp Sales SaaS",
+            description: "A rule-based WhatsApp Sales Automation SaaS designed to automate replies, capture leads, and manage products effectively with a comprehensive dashboard.",
+            tech: ["React", "Node.js", "WhatsApp API"],
         },
         {
-            title: "Instagram AI Auto-Poster",
-            description: "Generates visuals and captions, repurposes content, and schedules posts automatically.",
-            tech: ["Python", "Scheduling", "AI Vision"],
+            title: "CreatorFlow",
+            description: "AI-powered automation platform with payment integration via Stripe and AI-driven initialization. Optimized for high-performance workflow automation.",
+            tech: ["Next.js", "Stripe", "OpenAI"],
         },
         {
-            title: "CRM Automation System",
-            description: "Automates client follow-ups, pipeline management, and status updates to ensure no lead is lost.",
-            tech: ["n8n", "HubSpot", "AI Logic"],
+            title: "Reply Rocket",
+            description: "Specialized programmatic SEO tool with 30+ automated funnel pages and optimized contact forms to boost lead generation efficiency.",
+            tech: ["Python", "Automation", "SEO"],
         },
         {
-            title: "Email Outreach AI Agent",
-            description: "Sends personalized cold emails at scale, tracks replies, and automatically books meeting slots.",
-            tech: ["AI NLP", "SMTP", "Automation"],
+            title: "Shoe Store Ecommerce",
+            description: "Modern, full-stack E-commerce application with a functional shopping cart, product catalog, and admin inventory dashboard.",
+            tech: ["Next.js", "Tailwind", "Prisma"],
         },
         {
-            title: "Legal Document Analyzer",
-            description: "Parses complex legal contracts to identify risks and summarize key clauses using LLMs.",
-            tech: ["OpenAI", "React", "Node.js"],
+            title: "Autonomous Shutdown Utility",
+            description: "Python-based utility for scheduling system-level tasks and computer shutdowns through a clean, intuitive interface.",
+            tech: ["Python", "Utility", "System"],
         },
         {
-            title: "Voice AI Receptionist",
-            description: "Handles inbound calls, books appointments, and syncs with Google Calendar using realistic voice synthesis.",
-            tech: ["Vapi", "Python", "Twilio"],
+            title: "Experience Form App",
+            description: "Interactive web application for capturing and managing user feedback, designed for high engagement and responsiveness.",
+            tech: ["React", "UX/UI", "Automation"],
         }
     ];
 

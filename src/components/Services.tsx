@@ -1,5 +1,5 @@
 
-import { Workflow, Bot, Database, Zap, ChevronLeft, ChevronRight, BarChart, Globe } from 'lucide-react';
+import { Workflow, Bot, Database, Zap, ChevronLeft, ChevronRight, BarChart, Globe, Mail, Target } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useRef, useEffect } from 'react';
 
@@ -21,6 +21,16 @@ const Services = () => {
             icon: <Zap className="w-8 h-8 text-yellow-400" />,
             title: "Python Scripting",
             description: "Powerful custom scripts to handle complex data processing, web scraping, and system integrations that low-code tools can't touch.",
+        },
+        {
+            icon: <Mail className="w-8 h-8 text-cyan-400" />,
+            title: "Cold Outreach Automation",
+            description: "Automate your sales pipeline with programmatic email and LinkedIn outreach systems that deliver high-conversion leads.",
+        },
+        {
+            icon: <Target className="w-8 h-8 text-orange-400" />,
+            title: "Lead Generation Systems",
+            description: "End-to-end lead scraping and hyper-validation systems to ensure your outreach hits verified, high-intent prospects every time.",
         },
         {
             icon: <Database className="w-8 h-8 text-green-400" />,

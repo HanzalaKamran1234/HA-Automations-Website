@@ -1,5 +1,5 @@
 
-import { Bot, Code2, Cpu } from 'lucide-react';
+import { Bot, Code2, Cpu, Mail, Target } from 'lucide-react';
 import { motion, useSpring } from 'framer-motion';
 import { useEffect } from 'react';
 
@@ -50,11 +50,11 @@ const Hero = () => {
                     </div>
 
                     <h1 className="text-4xl md:text-7xl font-bold leading-tight">
-                        AI Automations That <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">Scale Your Business</span>
+                        AI & Outreach Automations That <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">Scale Your Business</span>
                     </h1>
 
                     <p className="text-base md:text-xl text-gray-400 max-w-lg">
-                        We build intelligent agents and workflow automations using Python and n8n to replace manual tasks with autonomous systems.
+                        We build intelligent agents, outreach systems, and workflow automations to replace manual tasks with autonomous scale.
                     </p>
 
                     <div className="flex flex-wrap gap-4">
@@ -108,24 +108,24 @@ const Hero = () => {
                             <span className="font-bold text-white">Python</span>
                         </motion.div>
 
-                        {/* AI Agents Pill (Right Middle) */}
+                        {/* Outreach Pill (Right Middle) */}
                         <motion.div
                             animate={{ x: [0, 10, 0] }}
                             transition={{ repeat: Infinity, duration: 4.5, delay: 1 }}
-                            className="absolute right-0 md:-right-8 top-1/2 -translate-y-1/2 bg-black border border-cyan-500 rounded-full py-2 px-4 shadow-[0_0_15px_rgba(6,182,212,0.3)] z-20 flex items-center gap-2"
+                            className="absolute right-0 md:-right-8 top-1/2 -translate-y-1/2 bg-black border border-purple-500 rounded-full py-2 px-4 shadow-[0_0_15px_rgba(168,85,247,0.3)] z-20 flex items-center gap-2"
                         >
-                            <Bot className="w-5 h-5 text-cyan-400" />
-                            <span className="font-bold text-white">AI Agents</span>
+                            <Mail className="w-5 h-5 text-purple-400" />
+                            <span className="font-bold text-white">Outreach</span>
                         </motion.div>
 
-                        {/* n8n Pill (Bottom Right) */}
+                        {/* Lead Gen Pill (Bottom Right) */}
                         <motion.div
                             animate={{ y: [0, 10, 0] }}
                             transition={{ repeat: Infinity, duration: 5, delay: 0.5 }}
-                            className="absolute right-0 md:-right-4 bottom-12 bg-black border border-cyan-500 rounded-full py-2 px-4 shadow-[0_0_15px_rgba(6,182,212,0.3)] z-20 flex items-center gap-2"
+                            className="absolute right-0 md:-right-4 bottom-12 bg-black border border-orange-500 rounded-full py-2 px-4 shadow-[0_0_15px_rgba(249,115,22,0.3)] z-20 flex items-center gap-2"
                         >
-                            <span className="text-pink-500 font-bold text-lg">⚡</span>
-                            <span className="font-bold text-white">n8n</span>
+                            <Target className="w-5 h-5 text-orange-500" />
+                            <span className="font-bold text-white">Lead Gen</span>
                         </motion.div>
                     </div>
 
