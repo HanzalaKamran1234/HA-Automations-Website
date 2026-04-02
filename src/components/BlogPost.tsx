@@ -31,7 +31,7 @@ const BlogPost = () => {
                 <title>{post.fields.title} | HA Automations</title>
                 <meta name="description" content={post.fields.excerpt} />
             </Helmet>
-            <div className="pt-32 pb-20 container mx-auto px-6 max-w-4xl">
+            <div className="pt-32 pb-20 container mx-auto px-8 md:px-6 max-w-4xl">
                 <Link to="/blog" className="inline-flex items-center gap-2 text-cyan-400 mb-8 hover:text-cyan-300 transition-colors">
                     <ArrowLeft className="w-4 h-4" /> Back to Blog
                 </Link>

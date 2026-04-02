@@ -32,7 +32,7 @@ const Hero = () => {
                 <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-purple-500/10 rounded-full blur-[100px]" />
             </div>
 
-            <div className="container mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
+            <div className="container mx-auto px-8 md:px-6 grid lg:grid-cols-2 gap-12 items-center">
 
                 {/* Left Content */}
                 <motion.div
@@ -102,7 +102,7 @@ const Hero = () => {
                         <motion.div
                             animate={{ y: [0, -10, 0] }}
                             transition={{ repeat: Infinity, duration: 4 }}
-                            className="absolute left-0 md:-left-4 top-12 bg-black border border-cyan-500 rounded-full py-2 px-4 shadow-[0_0_15px_rgba(6,182,212,0.3)] z-20 flex items-center gap-2"
+                            className="absolute left-4 md:-left-4 top-12 bg-black border border-cyan-500 rounded-full py-2 px-4 shadow-[0_0_15px_rgba(6,182,212,0.3)] z-20 flex items-center gap-2"
                         >
                             <span className="text-xl">🐍</span> {/* Using emoji for colorful python icon representation or custom svg if preferred, sticking to simple first */}
                             <span className="font-bold text-white">Python</span>
@@ -112,7 +112,7 @@ const Hero = () => {
                         <motion.div
                             animate={{ x: [0, 10, 0] }}
                             transition={{ repeat: Infinity, duration: 4.5, delay: 1 }}
-                            className="absolute right-0 md:-right-8 top-1/2 -translate-y-1/2 bg-black border border-purple-500 rounded-full py-2 px-4 shadow-[0_0_15px_rgba(168,85,247,0.3)] z-20 flex items-center gap-2"
+                            className="absolute right-4 md:-right-8 top-1/2 -translate-y-1/2 bg-black border border-purple-500 rounded-full py-2 px-4 shadow-[0_0_15px_rgba(168,85,247,0.3)] z-20 flex items-center gap-2"
                         >
                             <Mail className="w-5 h-5 text-purple-400" />
                             <span className="font-bold text-white">Outreach</span>
@@ -122,7 +122,7 @@ const Hero = () => {
                         <motion.div
                             animate={{ y: [0, 10, 0] }}
                             transition={{ repeat: Infinity, duration: 5, delay: 0.5 }}
-                            className="absolute right-0 md:-right-4 bottom-12 bg-black border border-orange-500 rounded-full py-2 px-4 shadow-[0_0_15px_rgba(249,115,22,0.3)] z-20 flex items-center gap-2"
+                            className="absolute right-4 md:-right-4 bottom-12 bg-black border border-orange-500 rounded-full py-2 px-4 shadow-[0_0_15px_rgba(249,115,22,0.3)] z-20 flex items-center gap-2"
                         >
                             <Target className="w-5 h-5 text-orange-500" />
                             <span className="font-bold text-white">Lead Gen</span>

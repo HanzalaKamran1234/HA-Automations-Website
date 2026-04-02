@@ -38,7 +38,7 @@ const Projects = () => {
 
     return (
         <section id="projects" className="py-24 relative">
-            <div className="container mx-auto px-6">
+            <div className="container mx-auto px-8 md:px-6">
                 <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
                     <div>
                         <h2 className="text-3xl md:text-5xl font-bold mb-4">Featured <span className="text-purple-500">Projects</span></h2>

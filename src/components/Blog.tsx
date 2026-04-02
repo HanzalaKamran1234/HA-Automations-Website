@@ -32,7 +32,7 @@ const Blog = () => {
                 <title>Blog | HA Automations</title>
                 <meta name="description" content="Insights on AI automation, software engineering, and scaling your business." />
             </Helmet>
-            <div className="pt-32 pb-20 container mx-auto px-6">
+            <div className="pt-32 pb-20 container mx-auto px-8 md:px-6">
                 <div className="text-center mb-16">
                     <h1 className="text-4xl md:text-6xl font-bold mb-6">
                         Latest <span className="bg-gradient-to-r from-cyan-400 to-purple-600 bg-clip-text text-transparent">Insights</span>

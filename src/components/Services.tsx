@@ -91,7 +91,7 @@ const Services = () => {
 
     return (
         <section id="services" className="py-24 relative overflow-hidden">
-            <div className="container mx-auto px-6 relative">
+            <div className="container mx-auto px-8 md:px-6 relative">
                 <div className="text-center mb-16">
                     <h2 className="text-3xl md:text-5xl font-bold mb-4">Our <span className="text-cyan-500">Services</span></h2>
                     <p className="text-gray-400 max-w-2xl mx-auto">

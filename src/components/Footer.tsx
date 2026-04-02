@@ -4,7 +4,7 @@ import { Github, Instagram, Mail } from 'lucide-react';
 const Footer = () => {
     return (
         <footer className="border-t border-white/5 py-12">
-            <div className="container mx-auto px-6">
+            <div className="container mx-auto px-8 md:px-6">
                 <div className="flex flex-col md:flex-row justify-between items-center gap-6">
                     <div className="text-center md:text-left">
                         <h3 className="text-xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">

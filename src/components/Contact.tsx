@@ -43,7 +43,7 @@ const Contact = () => {
             {/* Background Glow */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-cyan-500/5 rounded-full blur-[120px] pointer-events-none" />
 
-            <div className="container mx-auto px-6 max-w-4xl relative z-10">
+            <div className="container mx-auto px-8 md:px-6 max-w-4xl relative z-10">
                 <div className="text-center mb-16">
                     <h2 className="text-3xl md:text-5xl font-bold mb-6">Ready to <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-500">Automate</span> Your Growth?</h2>
                     <p className="text-gray-400">
