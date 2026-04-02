@@ -29,12 +29,12 @@ const WhyChooseUs = () => {
         <section className="py-24 relative overflow-hidden">
             <div className="container mx-auto px-8 md:px-6">
                 <div className="text-center mb-16">
-                    <h2 className="text-4xl md:text-5xl font-bold mb-4">
+                    <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
                         Why Choose <span className="text-cyan-400">Us?</span>
                     </h2>
                 </div>
 
-                <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
                     {features.map((feature, index) => (
                         <motion.div
                             key={index}

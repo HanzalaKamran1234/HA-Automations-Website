@@ -41,7 +41,7 @@ const TechStackExpertise = () => {
         <section className="py-24 relative overflow-hidden">
             <div className="container mx-auto px-8 md:px-6">
                 <div className="text-center mb-16">
-                    <h2 className="text-4xl md:text-5xl font-bold mb-4">
+                    <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
                         Tech Stack & <span className="text-cyan-400">Expertise</span>
                     </h2>
                 </div>
@@ -54,7 +54,7 @@ const TechStackExpertise = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: index * 0.05 }}
-                            className="bg-white/5 border border-white/10 rounded-2xl p-8 hover:bg-white/10 hover:border-cyan-500/50 transition-all group flex flex-col items-center justify-center gap-4 text-center h-[180px]"
+                            className="bg-white/5 border border-white/10 rounded-2xl p-5 md:p-8 hover:bg-white/10 hover:border-cyan-500/50 transition-all group flex flex-col items-center justify-center gap-3 text-center h-auto md:h-[180px]"
                         >
                             <div className="p-3 rounded-xl bg-black/50 group-hover:scale-110 transition-transform duration-300">
                                 {tech.icon}

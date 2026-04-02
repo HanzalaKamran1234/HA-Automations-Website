@@ -11,7 +11,7 @@ const About = () => {
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6 }}
                         viewport={{ once: true }}
-                        className="relative z-10 rounded-3xl p-8 md:p-12 border border-white/10 bg-white/5 backdrop-blur-sm overflow-hidden"
+                        className="relative z-10 rounded-2xl md:rounded-3xl p-5 sm:p-8 md:p-12 border border-white/10 bg-white/5 backdrop-blur-sm overflow-hidden"
                     >
                         {/* Background Gradient/Glow */}
                         <div className="absolute top-0 right-0 w-64 h-64 bg-cyan-500/10 rounded-full blur-[80px] pointer-events-none" />

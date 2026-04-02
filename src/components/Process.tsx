@@ -36,7 +36,7 @@ const Process = () => {
                     </p>
                 </div>
 
-                <div className="grid md:grid-cols-4 gap-8">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-5 md:gap-8">
                     {steps.map((step, index) => (
                         <motion.div
                             key={index}
@@ -44,7 +44,7 @@ const Process = () => {
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: index * 0.1 }}
-                            className="bg-white/5 border border-white/10 rounded-2xl p-8 hover:bg-white/10 hover:border-cyan-500/30 transition-all group relative overflow-hidden h-full flex flex-col"
+                            className="bg-white/5 border border-white/10 rounded-2xl p-6 md:p-8 hover:bg-white/10 hover:border-cyan-500/30 transition-all group relative overflow-hidden h-full flex flex-col"
                         >
                             <div className="mb-4 p-3 bg-black/50 w-fit rounded-xl border border-white/10 group-hover:border-cyan-500/30 transition-colors">
                                 {step.icon}
