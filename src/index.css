@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -81,4 +81,81 @@ body {
     padding-left: 1rem;
     padding-right: 1rem;
   }
+}
+
+/* ─── Medium-style Prose Rendering ──────────────── */
+.prose-serif {
+  font-family: 'Merriweather', serif;
+  line-height: 2;
+  font-size: 1.125rem;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.prose-serif h2 {
+  font-family: 'Inter', sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+  color: white;
+}
+
+.prose-serif h3 {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.prose-serif p {
+  margin-bottom: 2rem;
+}
+
+.prose-serif code {
+  font-family: 'Courier New', Courier, monospace;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 0.2rem 0.4rem;
+  border-radius: 0.25rem;
+  font-size: 0.9em;
+}
+
+.prose-serif pre {
+  background-color: #1a1a1a;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  overflow-x: auto;
+  margin-bottom: 2.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.prose-serif blockquote {
+  border-left: 4px solid #06b6d4; /* cyan-500 equivalent */
+  padding-left: 1.5rem;
+  font-style: italic;
+  margin: 2.5rem 0;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.prose-serif img {
+  border-radius: 0.75rem;
+  margin: 3rem 0;
+}
+
+.prose-serif .caption {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #9ca3af; /* gray-400 equivalent */
+  margin-top: -2rem;
+  margin-bottom: 3rem;
+  font-style: italic;
+}
+
+.divider-dots {
+  text-align: center;
+  font-size: 1.5rem;
+  letter-spacing: 0.5rem;
+  color: #4b5563; /* gray-600 equivalent */
+  margin: 3.5rem 0;
 }
