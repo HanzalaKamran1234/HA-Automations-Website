@@ -66,9 +66,9 @@ const Blog = () => {
                                 <div className="relative overflow-hidden rounded-[2.5rem] bg-white/5 border border-white/10 transition-all duration-500 group-hover:border-cyan-500/30 group-hover:bg-white/10">
                                     <div className="grid lg:grid-cols-2 gap-0">
                                         <div className="aspect-[16/10] lg:aspect-auto overflow-hidden">
-                                            {featuredPost.fields.coverImage?.fields?.file?.url ? (
+                                            {(featuredPost.fields.coverImage as any)?.fields?.file?.url ? (
                                                 <img 
-                                                    src={featuredPost.fields.coverImage.fields.file.url} 
+                                                    src={(featuredPost.fields.coverImage as any).fields.file.url} 
                                                     alt={featuredPost.fields.title}
                                                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                                                 />
@@ -120,9 +120,9 @@ const Blog = () => {
                                 <Link to={`/blog/${post.fields.slug}`} key={post.fields.slug} className="group block">
                                     <article className="bg-[#0f0f0f] border border-white/5 rounded-3xl overflow-hidden transition-all duration-300 hover:border-cyan-500/30 hover:-translate-y-2 h-full flex flex-col">
                                         <div className="aspect-[16/9] overflow-hidden relative">
-                                            {post.fields.coverImage?.fields?.file?.url ? (
+                                            {(post.fields.coverImage as any)?.fields?.file?.url ? (
                                                 <img 
-                                                    src={post.fields.coverImage.fields.file.url} 
+                                                    src={(post.fields.coverImage as any).fields.file.url} 
                                                     alt={post.fields.title}
                                                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                                                 />

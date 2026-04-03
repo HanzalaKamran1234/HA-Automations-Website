@@ -1,5 +1,5 @@
 import { createClient } from 'contentful';
-import type { Entry, EntrySkeletonType, Asset } from 'contentful';
+import type { Entry, EntrySkeletonType, EntryFieldTypes } from 'contentful';
 
 export const contentfulClient = createClient({
     space: import.meta.env.VITE_CONTENTFUL_SPACE_ID || '',
@@ -9,14 +9,14 @@ export const contentfulClient = createClient({
 export interface BlogPostSkeleton extends EntrySkeletonType {
     contentTypeId: 'blogPost';
     fields: {
-        title: string;
-        slug: string;
-        excerpt: string;
-        content: string;
-        date: string;
-        category: string;
-        readTime: string;
-        coverImage?: Asset;
+        title: EntryFieldTypes.Text;
+        slug: EntryFieldTypes.Text;
+        excerpt: EntryFieldTypes.Text;
+        content: EntryFieldTypes.Text;
+        date: EntryFieldTypes.Date;
+        category: EntryFieldTypes.Text;
+        readTime: EntryFieldTypes.Text;
+        coverImage?: EntryFieldTypes.AssetLink;
     };
 }
 

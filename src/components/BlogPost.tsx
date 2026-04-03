@@ -212,9 +212,9 @@ const BlogPost = () => {
             {/* Hero Image */}
             <div className="w-full max-w-7xl mx-auto px-4 md:px-0 mb-16 md:mb-24">
                 <div className="aspect-[21/9] rounded-3xl overflow-hidden bg-white/5 border border-white/5">
-                    {post.fields.coverImage?.fields?.file?.url ? (
+                    {((post.fields as any).coverImage as any)?.fields?.file?.url ? (
                         <img 
-                            src={post.fields.coverImage.fields.file.url} 
+                            src={(post.fields.coverImage as any).fields.file.url} 
                             alt={post.fields.title}
                             className="w-full h-full object-cover"
                         />
