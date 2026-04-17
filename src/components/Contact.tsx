@@ -11,7 +11,7 @@ const Contact = () => {
         setStatus('loading');
 
         try {
-            const response = await fetch("https://formsubmit.co/ajax/growtoglow44@gmail.com", {
+            const response = await fetch("https://formsubmit.co/ajax/info@hanzala.online", {
                 method: "POST",
                 headers: {
                     'Content-Type': 'application/json',
@@ -66,7 +66,7 @@ const Contact = () => {
                                 </div>
                                 <div>
                                     <p className="text-xs text-gray-500 uppercase tracking-wider">Email Us</p>
-                                    <p className="font-medium">growtoglow44@gmail.com</p>
+                                    <p className="font-medium">info@hanzala.online</p>
                                 </div>
                             </div>
 
