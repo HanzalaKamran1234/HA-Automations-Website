@@ -11,7 +11,7 @@ const Contact = () => {
         setStatus('loading');
 
         try {
-            const response = await fetch("https://formsubmit.co/ajax/info@hanzala.online", {
+            const response = await fetch("/api/contact", {
                 method: "POST",
                 headers: {
                     'Content-Type': 'application/json',
@@ -21,7 +21,6 @@ const Contact = () => {
                     name: formState.name,
                     email: formState.email,
                     message: formState.message,
-                    _subject: "New Lead from AA Agency Website!"
                 })
             });
 
