@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { MessageCircle, X, Send, User, Bot, Loader2, Trash2, Maximize2, Minimize2 } from 'lucide-react';
+import { MessageCircle, X, Send, User, Bot, Trash2, Maximize2, Minimize2 } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 interface Message {
