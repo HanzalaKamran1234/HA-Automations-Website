@@ -10,9 +10,11 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@google/generative-ai": "^0.24.1",
     "contentful": "^11.10.2",
     "contentful-management": "^11.75.0",
-    "framer-motion": "^12.25.0",
+    "dotenv": "^17.4.2",
+    "framer-motion": "^12.38.0",
     "lucide-react": "^0.562.0",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",

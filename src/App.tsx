@@ -7,6 +7,7 @@ import Blog from './components/Blog'
 import BlogPost from './components/BlogPost'
 import Footer from './components/Footer'
 import ScrollToTop from './components/ScrollToTop'
+import Chatbot from './components/Chatbot'
 
 // Initialize GA with a placeholder. User needs to replace this.
 ReactGA.initialize("G-XXXXXXXXXX");
@@ -24,6 +25,7 @@ function App() {
             <Route path="/blog/:id" element={<BlogPost />} />
           </Routes>
           <Footer />
+          <Chatbot />
         </div>
       </BrowserRouter>
     </HelmetProvider>
